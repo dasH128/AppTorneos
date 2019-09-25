@@ -1,0 +1,9 @@
+C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Domain\bin\Debug\netstandard2.0\Parcial.Domain.deps.json
+C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Domain\bin\Debug\netstandard2.0\Parcial.Domain.dll
+C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Domain\bin\Debug\netstandard2.0\Parcial.Domain.pdb
+C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Domain\obj\Debug\netstandard2.0\Parcial.Domain.csprojAssemblyReference.cache
+C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Domain\obj\Debug\netstandard2.0\Parcial.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Domain\obj\Debug\netstandard2.0\Parcial.Domain.AssemblyInfoInputs.cache
+C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Domain\obj\Debug\netstandard2.0\Parcial.Domain.AssemblyInfo.cs
+C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Domain\obj\Debug\netstandard2.0\Parcial.Domain.dll
+C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Domain\obj\Debug\netstandard2.0\Parcial.Domain.pdb

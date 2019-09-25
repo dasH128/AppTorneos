@@ -1,0 +1,179 @@
+{
+  "format": 1,
+  "restore": {
+    "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Service\\Parcial.Service.csproj": {}
+  },
+  "projects": {
+    "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\Parcial.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\Parcial.Domain.csproj",
+        "projectName": "Parcial.Domain",
+        "projectPath": "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\Parcial.Domain.csproj",
+        "packagesPath": "C:\\Users\\DashT\\.nuget\\packages\\",
+        "outputPath": "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\DashT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Repository\\Parcial.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Repository\\Parcial.Repository.csproj",
+        "projectName": "Parcial.Repository",
+        "projectPath": "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Repository\\Parcial.Repository.csproj",
+        "packagesPath": "C:\\Users\\DashT\\.nuget\\packages\\",
+        "outputPath": "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\DashT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\Parcial.Domain.csproj": {
+                "projectPath": "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\Parcial.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Service\\Parcial.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Service\\Parcial.Service.csproj",
+        "projectName": "Parcial.Service",
+        "projectPath": "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Service\\Parcial.Service.csproj",
+        "packagesPath": "C:\\Users\\DashT\\.nuget\\packages\\",
+        "outputPath": "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\DashT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\Parcial.Domain.csproj": {
+                "projectPath": "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\Parcial.Domain.csproj"
+              },
+              "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Repository\\Parcial.Repository.csproj": {
+                "projectPath": "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Repository\\Parcial.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
