@@ -19,3 +19,24 @@ C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Api\obj\Debug\netcore
 C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Api\obj\Debug\netcoreapp2.2\Parcial.Api.csproj.CopyComplete
 C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Api\obj\Debug\netcoreapp2.2\Parcial.Api.dll
 C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Api\obj\Debug\netcoreapp2.2\Parcial.Api.pdb
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\bin\Debug\netcoreapp2.2\Parcial.Api.deps.json
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\bin\Debug\netcoreapp2.2\Parcial.Api.runtimeconfig.json
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\bin\Debug\netcoreapp2.2\Parcial.Api.runtimeconfig.dev.json
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\bin\Debug\netcoreapp2.2\Parcial.Api.dll
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\bin\Debug\netcoreapp2.2\Parcial.Api.pdb
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\bin\Debug\netcoreapp2.2\Parcial.Domain.dll
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\bin\Debug\netcoreapp2.2\Parcial.Repository.dll
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\bin\Debug\netcoreapp2.2\Parcial.Service.dll
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\bin\Debug\netcoreapp2.2\Parcial.Domain.pdb
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\bin\Debug\netcoreapp2.2\Parcial.Service.pdb
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\bin\Debug\netcoreapp2.2\Parcial.Repository.pdb
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\obj\Debug\netcoreapp2.2\Parcial.Api.csprojAssemblyReference.cache
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\obj\Debug\netcoreapp2.2\Parcial.Api.csproj.CoreCompileInputs.cache
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\obj\Debug\netcoreapp2.2\Parcial.Api.RazorAssemblyInfo.cache
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\obj\Debug\netcoreapp2.2\Parcial.Api.RazorAssemblyInfo.cs
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\obj\Debug\netcoreapp2.2\Parcial.Api.AssemblyInfoInputs.cache
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\obj\Debug\netcoreapp2.2\Parcial.Api.AssemblyInfo.cs
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\obj\Debug\netcoreapp2.2\Parcial.Api.RazorTargetAssemblyInfo.cache
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\obj\Debug\netcoreapp2.2\Parcial.Api.csproj.CopyComplete
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\obj\Debug\netcoreapp2.2\Parcial.Api.dll
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Api\obj\Debug\netcoreapp2.2\Parcial.Api.pdb

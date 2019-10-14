@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,11 +12,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Parcial.Domain.helper;
 using Parcial.Repository;
 using Parcial.Repository.Implementation;
 using Parcial.Service;
 using Parcial.Service.Implementation;
 using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Parcial.Api
 {
@@ -33,6 +37,28 @@ namespace Parcial.Api
         {
             services.AddDbContext<ApplicationDbContext>(options=>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            //JWT Config
+            var tokenManagement = Configuration.GetSection("tokenManagement");
+            services.Configure<TokenAdministrador>(tokenManagement);
+
+            var tokenAdministrador = tokenManagement.Get<TokenAdministrador>();
+            var SecretKey = Encoding.ASCII.GetBytes(tokenAdministrador.SecretKey);
+            services.AddAuthentication(x => {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(x => {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters{
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(SecretKey),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
+
+
 
             services.AddTransient<IJugadorRepository,JugadorRepository>();
             services.AddTransient<IJugadorService,JugadorService>();
@@ -71,17 +97,17 @@ namespace Parcial.Api
             app.UseSwaggerUI (c => {
                 c.SwaggerEndpoint (SwaggerConfiguration.EndpointUrl, SwaggerConfiguration.EndpointDescription);
             });
-            if (env.IsDevelopment())
-            {
+            if (env.IsDevelopment()){
                 app.UseDeveloperExceptionPage();
-            }
-            else
-            {
+            }else{
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
+            app.UseCors ("Todos");
             app.UseHttpsRedirection();
+            //habilitacion de la autentificación
+            app.UseAuthentication();
             app.UseMvc();
         }
     }
