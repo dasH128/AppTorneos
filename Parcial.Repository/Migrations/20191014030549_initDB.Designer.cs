@@ -10,8 +10,8 @@ using Parcial.Repository;
 namespace Parcial.Repository.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190922035856_ini2")]
-    partial class ini2
+    [Migration("20191014030549_initDB")]
+    partial class initDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,26 @@ namespace Parcial.Repository.Migrations
                 .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Parcial.Domain.Cuenta", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Correo");
+
+                    b.Property<int>("JugadorId");
+
+                    b.Property<string>("Password");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("JugadorId")
+                        .IsUnique();
+
+                    b.ToTable("Cuentas");
+                });
 
             modelBuilder.Entity("Parcial.Domain.Inscripcion", b =>
                 {
@@ -82,6 +102,14 @@ namespace Parcial.Repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Torneos");
+                });
+
+            modelBuilder.Entity("Parcial.Domain.Cuenta", b =>
+                {
+                    b.HasOne("Parcial.Domain.Jugador")
+                        .WithOne("Cuenta")
+                        .HasForeignKey("Parcial.Domain.Cuenta", "JugadorId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Parcial.Domain.Inscripcion", b =>

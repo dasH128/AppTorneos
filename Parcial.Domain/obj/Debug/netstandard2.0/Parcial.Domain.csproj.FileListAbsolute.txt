@@ -7,3 +7,12 @@ C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Domain\obj\Debug\nets
 C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Domain\obj\Debug\netstandard2.0\Parcial.Domain.AssemblyInfo.cs
 C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Domain\obj\Debug\netstandard2.0\Parcial.Domain.dll
 C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Domain\obj\Debug\netstandard2.0\Parcial.Domain.pdb
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Domain\bin\Debug\netstandard2.0\Parcial.Domain.deps.json
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Domain\bin\Debug\netstandard2.0\Parcial.Domain.dll
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Domain\bin\Debug\netstandard2.0\Parcial.Domain.pdb
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Domain\obj\Debug\netstandard2.0\Parcial.Domain.csprojAssemblyReference.cache
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Domain\obj\Debug\netstandard2.0\Parcial.Domain.csproj.CoreCompileInputs.cache
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Domain\obj\Debug\netstandard2.0\Parcial.Domain.AssemblyInfoInputs.cache
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Domain\obj\Debug\netstandard2.0\Parcial.Domain.AssemblyInfo.cs
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Domain\obj\Debug\netstandard2.0\Parcial.Domain.dll
+d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Domain\obj\Debug\netstandard2.0\Parcial.Domain.pdb

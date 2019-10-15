@@ -49,20 +49,20 @@ namespace Parcial.Api.Controllers
             }
 
             var tokenHandler = new JwtSecurityTokenHandler();
-            // var tokenSettings = configuration.GetSection("tokenManagement");
-            
-            // var key = Encoding.ASCII.GetBytes(configuration.GetConnectionString("SecretKey"));
-            // Console.Write("Gaaa: key-> "+(configuration.GetConnectionString("SecretKey")));
-            // var TokenDescriptor = new SecurityTokenDescriptor{
-            //     Subject = new ClaimsIdentity( new Claim[]{
-            //         new Claim( ClaimTypes.Name, jugador.JugadorId.ToString())
-            //     }),
-            //     Expires = DateTime.UtcNow.AddDays(7),
-            //     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-            // };
-            // var token = tokenHandler.CreateToken(TokenDescriptor);
-            // jugador.Token = tokenHandler.WriteToken(token);
-
+            var tokenSettings = configuration.GetSection("tokenManagement");
+            var tokenAdministrador = tokenSettings.Get<TokenAdministrador>();
+            var key = Encoding.ASCII.GetBytes(tokenAdministrador.SecretKey);
+            // Console.Write("Gaaa: key-> "+(key));
+            var TokenDescriptor = new SecurityTokenDescriptor{
+                Subject = new ClaimsIdentity( new Claim[]{
+                    new Claim( ClaimTypes.Name, jugador.JugadorId.ToString())
+                }),
+                Expires = DateTime.UtcNow.AddDays(7),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(TokenDescriptor);
+            jugador.Token = tokenHandler.WriteToken(token);
+            jugador.JugadorId = 0;
             return Ok(jugador);
             // return Ok(jugadorService.Login(cuenta.Correo, cuenta.Password));
         }

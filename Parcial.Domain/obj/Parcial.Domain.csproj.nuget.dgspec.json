@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\Parcial.Domain.csproj": {}
+    "D:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\Parcial.Domain.csproj": {}
   },
   "projects": {
-    "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\Parcial.Domain.csproj": {
+    "D:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\Parcial.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\Parcial.Domain.csproj",
+        "projectUniqueName": "D:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\Parcial.Domain.csproj",
         "projectName": "Parcial.Domain",
-        "projectPath": "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\Parcial.Domain.csproj",
+        "projectPath": "D:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\Parcial.Domain.csproj",
         "packagesPath": "C:\\Users\\DashT\\.nuget\\packages\\",
-        "outputPath": "d:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\obj\\",
+        "outputPath": "D:\\upc\\ISW\\TrabajoISWv2\\TrabajoISWv2\\Parcial.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

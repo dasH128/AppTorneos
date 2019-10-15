@@ -19,6 +19,26 @@ namespace Parcial.Repository.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Parcial.Domain.Cuenta", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Correo");
+
+                    b.Property<int>("JugadorId");
+
+                    b.Property<string>("Password");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("JugadorId")
+                        .IsUnique();
+
+                    b.ToTable("Cuentas");
+                });
+
             modelBuilder.Entity("Parcial.Domain.Inscripcion", b =>
                 {
                     b.Property<int>("Id")
@@ -80,6 +100,14 @@ namespace Parcial.Repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Torneos");
+                });
+
+            modelBuilder.Entity("Parcial.Domain.Cuenta", b =>
+                {
+                    b.HasOne("Parcial.Domain.Jugador")
+                        .WithOne("Cuenta")
+                        .HasForeignKey("Parcial.Domain.Cuenta", "JugadorId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Parcial.Domain.Inscripcion", b =>
