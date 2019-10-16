@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using Parcial.Domain;
 using Parcial.Repository.Dto;
+using System.Text;
 
 namespace Parcial.Repository.Implementation
 {
@@ -16,12 +17,12 @@ namespace Parcial.Repository.Implementation
         public bool Create(Jugador entity){
             try{
                 context.Add(entity);
-                // context.SaveChanges();
 
                 Cuenta cuenta = new Cuenta{
                     JugadorId = entity.Id,
                     Correo = entity.Cuenta.Correo,
-                    Password = entity.Cuenta.Password
+                    // Password = Encoding.ASCII.GetBytes(entity.Cuenta.Password).ToString()
+                    Password = Convert.ToBase64String(Encoding.ASCII.GetBytes(entity.Cuenta.Password))
                 };
                 context.Cuentas.Add(cuenta);
                 context.SaveChanges();
@@ -32,8 +33,7 @@ namespace Parcial.Repository.Implementation
         }
 
 
-        public bool Delete(int id)
-        {
+        public bool Delete(int id){
             throw new System.NotImplementedException();
         }
 
@@ -43,26 +43,37 @@ namespace Parcial.Repository.Implementation
             try{
                 bool existe = context.Cuentas.Any(t => t.Correo == email);
                 result = existe;
-                // Console.Write("Gaaa: Existe-> "+existe);
             }catch(System.Exception){
                 throw;
             }
             return result;
         }
 
-        public IEnumerable<Jugador> FindAll()
-        {
+        public IEnumerable<Jugador> FindAll(){
             var result = new List<Jugador>();
-            try
-            {
+            try{
                 result = context.Jugadores.ToList();
-            }
-            catch (System.Exception)
-            {
-                
+            }catch (System.Exception){
                 throw;
             }
             return result;
+        }
+
+        public UsuarioDto findByEmail(string correo){
+            var cuenta = new Cuenta();
+            var jugador = new Jugador();
+            try{
+                cuenta = context.Cuentas.Single(c => c.Correo == correo);
+                jugador = context.Jugadores.Single(x=> x.Id == cuenta.JugadorId);
+                jugador.Cuenta = cuenta;
+            }catch (System.Exception){
+                return null;
+            }
+            var usuarioDto = new UsuarioDto();
+            usuarioDto.JugadorId = jugador.Id;
+            usuarioDto.Nickname = jugador.Nickname;
+            usuarioDto.Correo = cuenta.Correo;
+            return usuarioDto;
         }
 
         public Jugador FindByID(int id){
@@ -78,9 +89,9 @@ namespace Parcial.Repository.Implementation
         public UsuarioDto Login(string correo, string password){
             var cuenta = new Cuenta();
             var jugador = new Jugador();
-
+            // var myPassword = Encoding.ASCII.GetString(Convert.FromBase64String(c.Password));
             try{
-                cuenta = context.Cuentas.Single(c => c.Correo == correo && c.Password == password);
+                cuenta = context.Cuentas.Single(c => c.Correo == correo && Encoding.ASCII.GetString(Convert.FromBase64String(c.Password)) == password);
                 jugador = context.Jugadores.Single(j => j.Id == cuenta.JugadorId);
                 jugador.Cuenta = cuenta;
 

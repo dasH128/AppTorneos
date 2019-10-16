@@ -18,11 +18,13 @@ namespace Parcial.Api.Controllers
     {
         private IJugadorService jugadorService;
         private readonly IConfiguration configuration;
+        private TokenService tokenService;
         // private TokenAdministrador tokenAdministrador;
 
         public JugadorController(IJugadorService jugadorService, IConfiguration configuration){
             this.jugadorService = jugadorService;
             this.configuration = configuration;
+            tokenService = new TokenService();
         }
 
         [HttpGet]
@@ -37,8 +39,14 @@ namespace Parcial.Api.Controllers
             if(correoExist){
                 return BadRequest("El correo ya esta en uso");
             }
-
-            return Ok(jugadorService.Create(jugador));
+            var userCreate = jugadorService.Create(jugador);
+            if(!userCreate){
+                return BadRequest("No se pudo crear el usuario intentelo de nuevo");
+            }
+            var jugadorDB = jugadorService.findByEmail(jugador.Cuenta.Correo);
+            jugadorDB.Token = tokenService.Build(jugadorDB, configuration);
+            jugadorDB.JugadorId = 0;
+            return Ok(jugadorDB);
         }
 
         [HttpPost("login")]
@@ -48,23 +56,9 @@ namespace Parcial.Api.Controllers
                 return BadRequest("Usuario y/o contraseña incorrectas");
             }
 
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var tokenSettings = configuration.GetSection("tokenManagement");
-            var tokenAdministrador = tokenSettings.Get<TokenAdministrador>();
-            var key = Encoding.ASCII.GetBytes(tokenAdministrador.SecretKey);
-            // Console.Write("Gaaa: key-> "+(key));
-            var TokenDescriptor = new SecurityTokenDescriptor{
-                Subject = new ClaimsIdentity( new Claim[]{
-                    new Claim( ClaimTypes.Name, jugador.JugadorId.ToString())
-                }),
-                Expires = DateTime.UtcNow.AddDays(7),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-            };
-            var token = tokenHandler.CreateToken(TokenDescriptor);
-            jugador.Token = tokenHandler.WriteToken(token);
+            jugador.Token = tokenService.Build(jugador, configuration);
             jugador.JugadorId = 0;
             return Ok(jugador);
-            // return Ok(jugadorService.Login(cuenta.Correo, cuenta.Password));
         }
         [HttpPut]
         public ActionResult Put([FromBody] Jugador jugador)

@@ -29,6 +29,10 @@ namespace Parcial.Service.Implementation
            return jugadorRepository.FindAll();
         }
 
+        public UsuarioDto findByEmail(string correo){
+            return jugadorRepository.findByEmail(correo);
+        }
+
         public Jugador FindByID(int id){
             return jugadorRepository.FindByID(id);
         }

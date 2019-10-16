@@ -81,7 +81,18 @@ namespace Parcial.Api
                             Contact = contact
                     }
                 );
+                var security = new Dictionary<string, IEnumerable<string>>{
+                    {"Bearer", new string[] {}},
+                };
+                swagger.AddSecurityDefinition("Bearer", new ApiKeyScheme{
+                    Description = SwaggerConfiguration.SecDefDescription,
+                    Name = SwaggerConfiguration.SecDefName,
+                    In = SwaggerConfiguration.SecDefIn,
+                    Type = SwaggerConfiguration.SecDefType
+                });
+                swagger.AddSecurityRequirement(security);
             });
+            
 
             services.AddCors (options => {
                 options.AddPolicy ("Todos",

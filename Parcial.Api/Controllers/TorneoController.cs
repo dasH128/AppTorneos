@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Parcial.Domain;
 using Parcial.Service;
@@ -5,6 +6,7 @@ using Parcial.Service;
 namespace Parcial.Api.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class TorneoController:ControllerBase
     {

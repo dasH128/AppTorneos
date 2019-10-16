@@ -10,5 +10,11 @@ namespace Parcial.Api
         public const string DocInfoTitle = "ISW API";
         public const string DocInfoVersion = "v1";
         public const string DocInfoDescription = "ISW API";
+
+
+        public const string SecDefDescription = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"";
+        public const string SecDefName = "Authorization";
+        public const string SecDefIn = "header";
+        public const string SecDefType = "apiKey";
     }
 }

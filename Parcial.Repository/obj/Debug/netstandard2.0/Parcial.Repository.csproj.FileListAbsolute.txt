@@ -10,15 +10,3 @@ C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Repository\obj\Debug\
 C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Repository\obj\Debug\netstandard2.0\Parcial.Repository.csproj.CopyComplete
 C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Repository\obj\Debug\netstandard2.0\Parcial.Repository.dll
 C:\Users\Pablo\Desktop\Experimentos ISW\TrabajoISW\Parcial.Repository\obj\Debug\netstandard2.0\Parcial.Repository.pdb
-d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Repository\bin\Debug\netstandard2.0\Parcial.Repository.deps.json
-d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Repository\bin\Debug\netstandard2.0\Parcial.Repository.dll
-d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Repository\bin\Debug\netstandard2.0\Parcial.Repository.pdb
-d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Repository\bin\Debug\netstandard2.0\Parcial.Domain.dll
-d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Repository\bin\Debug\netstandard2.0\Parcial.Domain.pdb
-d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Repository\obj\Debug\netstandard2.0\Parcial.Repository.csprojAssemblyReference.cache
-d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Repository\obj\Debug\netstandard2.0\Parcial.Repository.csproj.CoreCompileInputs.cache
-d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Repository\obj\Debug\netstandard2.0\Parcial.Repository.AssemblyInfoInputs.cache
-d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Repository\obj\Debug\netstandard2.0\Parcial.Repository.AssemblyInfo.cs
-d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Repository\obj\Debug\netstandard2.0\Parcial.Repository.csproj.CopyComplete
-d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Repository\obj\Debug\netstandard2.0\Parcial.Repository.dll
-d:\upc\ISW\TrabajoISWv2\TrabajoISWv2\Parcial.Repository\obj\Debug\netstandard2.0\Parcial.Repository.pdb

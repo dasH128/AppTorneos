@@ -7,5 +7,6 @@ namespace Parcial.Service
     {
         bool EmailExist(string email);
         UsuarioDto Login(string correo, string password);
+        UsuarioDto findByEmail(string correo);
     }
 }
